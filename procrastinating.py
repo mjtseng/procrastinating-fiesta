@@ -12,3 +12,5 @@ elif(str(notworking) == "Geico could save you 15% or more on car insurance"):
 	print ("Can't argue with that.")
 else:
 	print ("Sorry, I didn't get that. (You're procrastinating right now, aren't you?)")
+
+#TODO: make this into something useful or at least more entertaining
