@@ -48,12 +48,14 @@ elif (x == pressed):
 
 '''
 
-#TODOS and NOTES:
+# TODOS and NOTES:
 # try to optimize code - there has to be a better way to do this
 
+# to be implemented:
 # it would be cool if there was a log of some sort, of how often you were/weren't procrastinating.
 # maybe have an array to keep track of dates as well? (the day and a list of that day's results?) idk really
 	# ok so having days sounds hard and I'm going to focus on a list of results for now (as of 5/9/18)
+# this will be far in the future but what about a GUI? A command-line thing is very meh in terms of aesthetics
 
 '''
 MASTER LIST OF ALL FUNCTIONS because I can't keep track of them and what they do:
