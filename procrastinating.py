@@ -2,23 +2,25 @@
 # Procrastinating Fiesta:
 # are you procrastinating?
 
-# may want to make this into a function instead?
-# also, u sure you want to use bools?
-notworking = input("Are you procrastinating? Type 'True' or 'False' ")
-# likely answers
-if (str(notworking) == "True"):
-	print ("Shame on you. You have things to do. Sad!")
-elif (str(notworking) == "False"):
-	print ("gfy... Are you lying? Because you (very likely) have work.")
+# call functions here
 
-# easter eggs
-elif(str(notworking) == "42"):
-	print ("I pity the fool that procrastinates... but good answer")
-elif(str(notworking) == "Geico could save you 15% or more on car insurance"):
-	print ("Can't argue with that.")
-else:
-	print ("Sorry, I didn't get that. (You're procrastinating right now, aren't you?)")
-	# or, you can make a temporary variable to store the answer in, and then you can put it in the log later!
+# some function definitions
+# u sure you want to use bools?
+# o crap I can't remember the syntax to define functions. lol this is pathetic, guess I don't know Python after all
+def notworking:
+	notworking_var = input("Are you procrastinating? Type your answer: 'True' or 'False' ")
+	if (str(notworking_var) == "True"):
+		print ("Shame on you. You have things to do. Sad!")
+	elif (str(notworking_var) == "False"):
+		print ("gfy... Are you lying? Because you (very likely) have work.")
+	# :)
+	elif(str(notworking_var) == "42"):
+		print ("I pity the fool that procrastinates... but good answer")
+	elif(str(notworking_var) == "Geico could save you 15% or more on car insurance"):
+		print ("Can't argue with that.")
+	else:
+		print ("Sorry, I didn't get that. (You're procrastinating right now, aren't you?)")
+		# and/or, you can make a temporary variable to store the answer in, and then you can put it in the log later!
 
 '''
 LOG CODE:
