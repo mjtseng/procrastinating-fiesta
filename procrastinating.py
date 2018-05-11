@@ -2,35 +2,39 @@
 # Procrastinating Fiesta:
 # are you procrastinating?
 
-# call functions here
+# CALL FUNCTIONS
+notworking()
+add_entry() # WARNING: currently does not exist. Fix function and un-comment-out before testing
 
-# some function definitions
-# u sure you want to use bools?
+# FUNCTION DEFINITIONS
+
+# u sure you want to use bools for notworking() ?
 # o crap I can't remember the syntax to define functions. lol this is pathetic, guess I don't know Python after all
-def notworking:
+def notworking():
+	# should you take notworking_var out of the function and use it as an argument? ::thinking emoji::
 	notworking_var = input("Are you procrastinating? Type your answer: 'True' or 'False' ")
 	if (str(notworking_var) == "True"):
 		print ("Shame on you. You have things to do. Sad!")
 	elif (str(notworking_var) == "False"):
-		print ("gfy... Are you lying? Because you (very likely) have work.")
+		print ("gfy... Are you lying? Because you (very likely) have work.") # "gfy" this is so passive aggressive haha
 	# :)
 	elif(str(notworking_var) == "42"):
-		print ("I pity the fool that procrastinates... but good answer")
+		print ("I pity the fool that procrastinates... but good answer") # actually idk what I was thinking here
 	elif(str(notworking_var) == "Geico could save you 15% or more on car insurance"):
 		print ("Can't argue with that.")
 	else:
 		print ("Sorry, I didn't get that. (You're procrastinating right now, aren't you?)")
 		# and/or, you can make a temporary variable to store the answer in, and then you can put it in the log later!
 
+
+# LOG CODE:
+
+# create initial, empty log here: list or something else mutable. 
+# question: Can I have persistent memory for something like this? Or will it disappear when ending the program?
+
 '''
-LOG CODE:
-
-# create log here: list or something else mutable.
-log
-
-# create function to add an entry to the log
-
-def add_entry:
+def add_entry():
+	# function to add an entry to the log
 	wannalog = input("Do you want to log your answer for the future? (y/n)")
 	if (wannalog == "y"):
 		print("Logging...")
