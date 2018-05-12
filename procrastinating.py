@@ -2,6 +2,11 @@
 # Procrastinating Fiesta:
 # are you procrastinating?
 
+# have the title string thing that will be printed when program starts in command line
+	# u know the thing with stuff like license and year, version and stuff like that
+# print("Welcome to Procrastinating Fiesta! Currently running v 0.1. Type info() for more info, license() to see the license, or exit() to quit.")
+	# neither info(), license(), nor exit() currently exist. Also check a real titlestring to see what's in it
+
 # CALL FUNCTIONS
 notworking()
 add_entry() # WARNING: currently does not exist. Fix function and un-comment-out before testing
@@ -29,8 +34,9 @@ def notworking():
 
 # LOG CODE:
 
-# create initial, empty log here: list or something else mutable. 
+# create initial, empty log: list or something else mutable.
 # question: Can I have persistent memory for something like this? Or will it disappear when ending the program?
+	# If it can be kept indefinitely then 
 
 '''
 def add_entry():
@@ -50,12 +56,15 @@ if (space == pressed):
 elif (c == pressed):
 	# clear entire log (will need another function for this?)
 elif (x == pressed):
-	# exit whole program
+	# exit whole program - use same quit function as titlestring will
+	exit()
 
 '''
 
 # TODOS and NOTES:
 # try to optimize code - there has to be a better way to do this
+# create functions
+# update titlestring and license things
 
 # to be implemented:
 # it would be cool if there was a log of some sort, of how often you were/weren't procrastinating.
@@ -70,5 +79,7 @@ MASTER LIST OF ALL FUNCTIONS because I can't keep track of them and what they do
 - add_entry() is used to put the user's entry into the log if they opt to do so.
 - clear_log() is used to delete all entries from the log and allow the user to put their new input into a newly blank log.
 	- should it be clearlog and add entry, or just clear log without adding an entry? Maybe I can put an option here.
+- info() is used to display more info about the project: the author, last update (May 2018), etc.
+- exit() is used to quit and close the program. (look to see if there's a built-in Python function for this)
 
 '''
