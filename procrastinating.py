@@ -2,41 +2,55 @@
 # Procrastinating Fiesta:
 # are you procrastinating?
 
-# have the title string thing that will be printed when program starts in command line
-	# u know the thing with stuff like license and year, version and stuff like that
-# print("Welcome to Procrastinating Fiesta! Currently running v 0.1. Type info() for more info, license() to see the license, or exit() to quit.")
-	# neither info(), license(), nor exit() currently exist. Also check a real titlestring to see what's in it
-
-# CALL FUNCTIONS
-notworking()
-add_entry() # WARNING: currently does not exist. Fix function and un-comment-out before testing
 
 # FUNCTION DEFINITIONS
 
+def start():
+	if(input("To start, hit <space>.") == " "):
+		return "ready"
+
 # u sure you want to use bools for notworking() ?
-# o crap I can't remember the syntax to define functions. lol this is pathetic, guess I don't know Python after all
 def notworking():
 	# should you take notworking_var out of the function and use it as an argument? ::thinking emoji::
 	notworking_var = input("Are you procrastinating? Type your answer: 'True' or 'False' ")
 	if (str(notworking_var) == "True"):
-		print ("Shame on you. You have things to do. Sad!")
+		return ("Shame on you. You have things to do. Sad!")
 	elif (str(notworking_var) == "False"):
-		print ("gfy... Are you lying? Because you (very likely) have work.") # "gfy" this is so passive aggressive haha
+		return ("gfy... Are you lying? Because you (very likely) have work.") # "gfy" this is so passive aggressive haha
 	# :)
 	elif(str(notworking_var) == "42"):
-		print ("I pity the fool that procrastinates... but good answer") # actually idk what I was thinking here
+		return ("I pity the fool that procrastinates... but good answer") # actually idk what I was thinking here
 	elif(str(notworking_var) == "Geico could save you 15% or more on car insurance"):
-		print ("Can't argue with that.")
+		return ("Can't argue with that.")
 	else:
-		print ("Sorry, I didn't get that. (You're procrastinating right now, aren't you?)")
+		return ("Sorry, I didn't get that. (You're procrastinating right now, aren't you?)")
 		# and/or, you can make a temporary variable to store the answer in, and then you can put it in the log later!
 
+# END FUNCTION DEFINITIONS
+
+
+# have the title string thing that will be printed when program starts in command line
+	# u know the thing with stuff like license and year, version and stuff like that
+print("Welcome to Procrastinating Fiesta! Currently running v 0.1.\nType info() for more info, license() to see the license, or exit() to quit.")
+	# neither info(), license(), nor exit() currently exist
+	# running the command "ipython" gives this (I have Anaconda). Note that the results of these tell you to go to a website
+	# "q" gives you a quick tutorial kinda thing
+'''
+		Python 3.6.5 |Anaconda custom (64-bit)| (default, Mar 29 2018, 13:32:41) [MSC v.1900 64 bit (AMD64)]
+		Type 'copyright', 'credits' or 'license' for more information
+		IPython 6.3.1 -- An enhanced Interactive Python. Type '?' for help.
+'''
+
+# CALL FUNCTIONS
+
+# print current results
+print(notworking())
 
 # LOG CODE:
 
 # create initial, empty log: list or something else mutable.
 # question: Can I have persistent memory for something like this? Or will it disappear when ending the program?
-	# If it can be kept indefinitely then 
+	# If it can be kept indefinitely then maybe I can make a file and access it
 
 '''
 def add_entry():
@@ -80,6 +94,7 @@ MASTER LIST OF ALL FUNCTIONS because I can't keep track of them and what they do
 - clear_log() is used to delete all entries from the log and allow the user to put their new input into a newly blank log.
 	- should it be clearlog and add entry, or just clear log without adding an entry? Maybe I can put an option here.
 - info() is used to display more info about the project: the author, last update (May 2018), etc.
+- license() displays the license
 - exit() is used to quit and close the program. (look to see if there's a built-in Python function for this)
 
 '''
