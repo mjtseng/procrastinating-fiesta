@@ -3,13 +3,28 @@
 # are you procrastinating?
 
 
-# FUNCTION DEFINITIONS
+# -------- FUNCTION DEFINITIONS --------------------------------
+
+# the way all of these work actually makes no sense to me but it kinda works?? keeping it, will fix later
+def get_start_info():
+	''' this determines what happens at the beginning of the program '''
+	first_input = input("Type info for more info, license to see the license, or exit to quit.")
+	if (first_input == "info"):
+		return "hello! here's a placeholder for info"
+	elif (first_input == "license"):
+		return "hello! the license will be here shortly. Thanks for your patience! (planning to use the Mozilla copyleft thing)"
+	elif (first_input == "exit"):
+		return "Sorry to see you go!"
 
 def start():
-	if(input("To start, hit <space>.") == " "):
+	''' when the user presses <start> and <enter>, the program returns what is used as the start signal, "ready". '''
+	arewethereyet = input("To start, hit <space>, then <enter>.")
+	if (arewethereyet == " "):
 		return "ready"
+	else:
+		print(get_start_info())
 
-# u sure you want to use bools for notworking() ?
+# u sure you want to use bools for notworking() ? You can use some of Python's built-in functions to handle cases, etc.
 def notworking():
 	# should you take notworking_var out of the function and use it as an argument? ::thinking emoji::
 	notworking_var = input("Are you procrastinating? Type your answer: 'True' or 'False' ")
@@ -26,13 +41,12 @@ def notworking():
 		return ("Sorry, I didn't get that. (You're procrastinating right now, aren't you?)")
 		# and/or, you can make a temporary variable to store the answer in, and then you can put it in the log later!
 
-# END FUNCTION DEFINITIONS
+# -------- END FUNCTION DEFINITIONS --------------------------------
 
 
 # have the title string thing that will be printed when program starts in command line
 	# u know the thing with stuff like license and year, version and stuff like that
-print("Welcome to Procrastinating Fiesta! Currently running v 0.1.\nType info() for more info, license() to see the license, or exit() to quit.")
-	# neither info(), license(), nor exit() currently exist
+print("\nWelcome to Procrastinating Fiesta! Currently running v 0.1.0")
 	# running the command "ipython" gives this (I have Anaconda). Note that the results of these tell you to go to a website
 	# "q" gives you a quick tutorial kinda thing
 '''
@@ -41,16 +55,18 @@ print("Welcome to Procrastinating Fiesta! Currently running v 0.1.\nType info() 
 		IPython 6.3.1 -- An enhanced Interactive Python. Type '?' for help.
 '''
 
-# CALL FUNCTIONS
+# -------- CALL FUNCTIONS --------------------------------
 
-# print current results
-print(notworking())
+# if user wants to start, print current results
+print(get_start_info())
+if (start() == "ready"):
+	print(notworking())
 
-# LOG CODE:
+# -------- LOG CODE: --------------------------------
 
 # create initial, empty log: list or something else mutable.
 # question: Can I have persistent memory for something like this? Or will it disappear when ending the program?
-	# If it can be kept indefinitely then maybe I can make a file and access it
+	# Maybe I can make a file and access it; then you can export to a spreadsheet and stuff like that
 
 '''
 def add_entry():
@@ -75,10 +91,10 @@ elif (x == pressed):
 
 '''
 
-# TODOS and NOTES:
+# -------- TODOS and NOTES: --------------------------------
 # try to optimize code - there has to be a better way to do this
-# create functions
 # update titlestring and license things
+# understand functions; attempt to organize them so they make sense
 
 # to be implemented:
 # it would be cool if there was a log of some sort, of how often you were/weren't procrastinating.
@@ -86,9 +102,8 @@ elif (x == pressed):
 	# ok so having days sounds hard and I'm going to focus on a list of results for now (as of 5/9/18)
 # this will be far in the future but what about a GUI? A command-line thing is very meh in terms of aesthetics
 
+# -------- MASTER LIST OF ALL FUNCTIONS because I can't keep track of them and what they do: --------------------------------
 '''
-MASTER LIST OF ALL FUNCTIONS because I can't keep track of them and what they do:
-
 - notworking() is used to take the user's initial input of whether they are procrastinating at the moment.
 - add_entry() is used to put the user's entry into the log if they opt to do so.
 - clear_log() is used to delete all entries from the log and allow the user to put their new input into a newly blank log.
