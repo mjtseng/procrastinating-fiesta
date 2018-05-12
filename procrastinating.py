@@ -18,6 +18,7 @@ def get_start_info():
 
 def start():
 	''' when the user presses <start> and <enter>, the program returns what is used as the start signal, "ready". '''
+	# actually I don't know why you need to press <enter> too. TODO: research
 	arewethereyet = input("To start, hit <space>, then <enter>.")
 	if (arewethereyet == " "):
 		return "ready"
@@ -41,8 +42,7 @@ def notworking():
 		return ("Sorry, I didn't get that. (You're procrastinating right now, aren't you?)")
 		# and/or, you can make a temporary variable to store the answer in, and then you can put it in the log later!
 
-# -------- END FUNCTION DEFINITIONS --------------------------------
-
+# -------- THINGS START HAPPENING --------------------------------
 
 # have the title string thing that will be printed when program starts in command line
 	# u know the thing with stuff like license and year, version and stuff like that
@@ -54,8 +54,6 @@ print("\nWelcome to Procrastinating Fiesta! Currently running v 0.1.0")
 		Type 'copyright', 'credits' or 'license' for more information
 		IPython 6.3.1 -- An enhanced Interactive Python. Type '?' for help.
 '''
-
-# -------- CALL FUNCTIONS --------------------------------
 
 # if user wants to start, print current results
 print(get_start_info())
@@ -95,6 +93,11 @@ elif (x == pressed):
 # try to optimize code - there has to be a better way to do this
 # update titlestring and license things
 # understand functions; attempt to organize them so they make sense
+	# explain EVERYTHING to a rubber duck
+		# find a nice rubber duck
+	# to be fixed: after typing in "info"/"license"/"exit" it works, then prompts you to press <start> and <enter>, but you can still type "info"/"license"/"exit".
+		# after doing that, it prints "Type info for info, license for the license", etc. and it works
+		# then, the program ends
 
 # to be implemented:
 # it would be cool if there was a log of some sort, of how often you were/weren't procrastinating.
