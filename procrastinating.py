@@ -70,6 +70,7 @@ elif (x == pressed):
 # -------- TODOS and NOTES: --------------------------------
 # try to optimize code - there has to be a better way to do this
 # update titlestring and license things
+# figure out how to version this (looks like there are multiple ways to do this... ugh)
 
 # to be implemented:
 # it would be cool if there was a log of some sort, of how often you were/weren't procrastinating.
