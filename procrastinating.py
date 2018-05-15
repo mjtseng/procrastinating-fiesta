@@ -5,9 +5,9 @@
 
 # -------- FUNCTION DEFINITIONS --------------------------------
 
-# u sure you want to use bools for notworking() ? You can use some of Python's built-in functions to handle cases, etc.
+# u sure you want to use bools for notworking() ? You can use some of Python's built-in functions to handle cases, etc. with strings
 def notworking():
-	# should you take notworking_var out of the function and use it as an argument? ::thinking emoji::
+	# is there a better way than using bools?
 	notworking_var = input("Are you procrastinating? Type your answer: 'True' or 'False' ")
 	if (str(notworking_var) == "True"):
 		return ("Shame on you. You have things to do. Sad!")
@@ -19,8 +19,8 @@ def notworking():
 	elif(str(notworking_var) == "Geico could save you 15% or more on car insurance"):
 		return ("Can't argue with that.")
 	else:
-		return ("Sorry, I didn't get that. (You're procrastinating right now, aren't you?)")
-		# and/or, you can make a temporary variable to store the answer in, and then you can put it in the log later!
+		return ("'%d'? Sorry, I didn't get that. (You're procrastinating right now, aren't you?)" %(notworking_var))
+		# notworking_var is used as a variable to store the answer in, and then you can maybe put it in the log later
 
 def test_start():
 	'''This is a test. Hopefully, this will be used to take *any* input from the user and return the correct thing.'''
