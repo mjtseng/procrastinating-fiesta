@@ -19,7 +19,7 @@ def notworking():
 	elif(str(notworking_var) == "Geico could save you 15% or more on car insurance"):
 		return ("Can't argue with that.")
 	else:
-		return ("'%d'? Sorry, I didn't get that. (You're procrastinating right now, aren't you?)" %(notworking_var))
+		return ("'%s'? Sorry, I didn't get that. (You're procrastinating right now, aren't you?)" %(notworking_var))
 		# notworking_var is used as a variable to store the answer in, and then you can maybe put it in the log later
 
 def test_start():
