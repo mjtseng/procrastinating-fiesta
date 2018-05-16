@@ -5,9 +5,8 @@
 
 # -------- FUNCTION DEFINITIONS --------------------------------
 
-# u sure you want to use bools for notworking() ? You can use some of Python's built-in functions to handle cases, etc. with strings
+# You can use some of Python's built-in functions to handle cases, etc. with strings
 def notworking():
-	# is there a better way than using bools?
 	notworking_var = input("Are you procrastinating? Type your answer: 'True' or 'False' ")
 	if (str(notworking_var) == "True"):
 		return ("Shame on you. You have things to do. Sad!")
@@ -22,8 +21,19 @@ def notworking():
 		return ("'%s'? You're procrastinating right now, aren't you?" %(notworking_var))
 		# notworking_var is used as a variable to store the answer in, and then you can maybe put it in the log later
 
+'''
+# this feels real inefficient, there has to be a better way to deal with unexpected inputs
+def unexpected_beginning():
+	# This is used in case a user puts in something other than the 4 beginning inputs
+	approved_inputs = ["info", "license", "exit", " "]
+	new_user_intent = input("Sorry, I can't process that - check for typos? (Don't put a space before 'info', 'license', or 'exit'.)")
+	# the parenthetical note is temporary - later I'll use some a built-in string processing function to remove whitespace (I think you can do that?)
+	if str(new_user_intent) in approved_inputs:
+		return test_start()
+'''
+
 def test_start():
-	'''This is a test. Hopefully, this will be used to take *any* input from the user and return the correct thing.'''
+	'''This is used to take *any* input from the user and return the correct thing.'''
 	user_intent = input("\nWelcome to Procrastinating Fiesta! Currently running v 0.1.1\nType info for more info, license to see the license, or exit to quit.\nTo start, hit <space>, then <enter>.")
 	if (user_intent == "info"):
 		return "hello! here's a placeholder for info"
@@ -33,10 +43,14 @@ def test_start():
 		return "Sorry to see you go!"
 	elif (user_intent == " "):
 		return notworking()
+	else:
+		# return unexpected_beginning()
+		return "Um, what? I didn't catch that - please try again!"
 
-# -------- THINGS START HAPPENING --------------------------------
+# -------- THINGS HAPPEN --------------------------------
 
 print(test_start())
+# log things
 
 # -------- LOG CODE: --------------------------------
 
@@ -66,13 +80,12 @@ elif (x == pressed):
 	exit()
 
 '''
-
 # -------- TODOS and NOTES: --------------------------------
 # try to optimize code - there has to be a better way to do this
 # update titlestring and license things
 # figure out how to version this (looks like there are multiple ways to do this... ugh)
+# allow inputs to be case-insensitive - pretty sure you can import something for this, or use a built-in function
 
-# to be implemented:
 # it would be cool if there was a log of some sort, of how often you were/weren't procrastinating.
 # maybe have an array to keep track of dates as well? (the day and a list of that day's results?) idk really
 	# ok so having days sounds hard and I'm going to focus on a list of results for now (as of 5/9/18)
