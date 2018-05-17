@@ -21,17 +21,6 @@ def notworking():
 		return ("'%s'? You're procrastinating right now, aren't you?" %(notworking_var))
 		# notworking_var is used as a variable to store the answer in, and then you can maybe put it in the log later
 
-'''
-# this feels real inefficient, there has to be a better way to deal with unexpected inputs
-def unexpected_beginning():
-	# This is used in case a user puts in something other than the 4 beginning inputs
-	approved_inputs = ["info", "license", "exit", " "]
-	new_user_intent = input("Sorry, I can't process that - check for typos? (Don't put a space before 'info', 'license', or 'exit'.)")
-	# the parenthetical note is temporary - later I'll use some a built-in string processing function to remove whitespace (I think you can do that?)
-	if str(new_user_intent) in approved_inputs:
-		return test_start()
-'''
-
 def test_start():
 	'''This is used to take *any* input from the user and return the correct thing.'''
 	user_intent = input("\nWelcome to Procrastinating Fiesta! Currently running v 0.1.1\nType info for more info, license to see the license, or exit to quit.\nTo start, hit <space>, then <enter>.")
@@ -44,7 +33,6 @@ def test_start():
 	elif (user_intent == " "):
 		return notworking()
 	else:
-		# return unexpected_beginning()
 		return "Um, what? I didn't catch that - please try again!"
 
 # -------- THINGS HAPPEN --------------------------------
