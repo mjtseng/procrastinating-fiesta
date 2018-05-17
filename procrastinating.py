@@ -23,14 +23,15 @@ def notworking():
 
 def test_start():
 	'''This is used to take *any* input from the user and return the correct thing.'''
-	user_intent = input("\nWelcome to Procrastinating Fiesta! Currently running v 0.1.1\nType info for more info, license to see the license, or exit to quit.\nTo start, hit <space>, then <enter>.")
+	user_intent = input("\nWelcome to Procrastinating Fiesta! Currently running v 0.1.1\nType info for more info, license to see the license, or exit to quit.\nTo start, hit <enter>.")
 	if (user_intent == "info"):
 		return "hello! here's a placeholder for info"
 	elif (user_intent == "license"):
 		return "hello! the license will be here shortly. Thanks for your patience! (planning to use the Mozilla copyleft thing)"
 	elif (user_intent == "exit"):
 		return "Sorry to see you go!"
-	elif (user_intent == " "):
+	elif (user_intent == ""):
+		# you don't need to type anything here except <enter>; there is no need for both <space> and <enter>
 		return notworking()
 	else:
 		return "Um, what? I didn't catch that - please try again!"
