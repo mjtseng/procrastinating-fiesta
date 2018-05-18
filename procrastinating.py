@@ -46,6 +46,7 @@ print(test_start())
 # create initial, empty log: list or something else mutable.
 # question: Can I have persistent memory for something like this? Or will it disappear when ending the program?
 	# Maybe I can make a file and access it; then you can export to a spreadsheet and stuff like that
+	# is there a built-in command for this? [also today I am very tired, have lots of work, and will actually code tomorrow]
 
 '''
 def add_entry():
