@@ -44,17 +44,21 @@ print(test_start())
 # -------- LOG CODE: --------------------------------
 
 # create initial, empty log: list or something else mutable.
-# question: Can I have persistent memory for something like this? Or will it disappear when ending the program?
-	# Maybe I can make a file and access it; then you can export to a spreadsheet and stuff like that
-	# is there a built-in command for this? [also today I am very tired, have lots of work, and will actually code tomorrow]
+# I'll create a new file for it, if there isn't already a file
+	# description of syntax here: http://www.pythonforbeginners.com/files/reading-and-writing-files-in-python
 
 '''
+def init_log():
+	# create the file for the log if it does not exist yet; otherwise, open the file
+
+
+
 def add_entry():
 	# function to add an entry to the log
 	wannalog = input("Do you want to log your answer for the future? (y/n)")
 	if (wannalog == "y"):
 		print("Logging...")
-		# put result into records
+		# use init_log() here; see above definition of this function
 		print("Logged!")
 	else:
 		print ("Response discarded.")
@@ -84,6 +88,7 @@ elif (x == pressed):
 # -------- MASTER LIST OF ALL FUNCTIONS because I can't keep track of them and what they do: --------------------------------
 '''
 - notworking() is used to take the user's initial input of whether they are procrastinating at the moment.
+- init_log() checks if the log file exists. If it doesn't, it is created; else, it is opened.
 - add_entry() will be used to put the user's entry into the log if they opt to do so.
 - clear_log() will be used to delete all entries from the log and allow the user to put their new input into a newly blank log.
 	- should it be clearlog and add entry, or just clear log without adding an entry? Maybe I can put an option here.
