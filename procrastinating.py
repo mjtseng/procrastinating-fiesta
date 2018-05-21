@@ -41,6 +41,16 @@ def test_start():
 print(test_start())
 # log things
 
+# log test:
+print("Beginning log test...")
+file = open("test_log.txt", "w")
+file.write("entry one\n")
+file.close()
+file = open("test_log.txt", "w")
+file.write("entry two\n")
+file.close()
+print("Log test completed!")
+
 # -------- LOG CODE: --------------------------------
 
 # create initial, empty log: list or something else mutable.
