@@ -42,32 +42,32 @@ print(test_start())
 # log things
 
 # log test:
-print("Beginning log test...")
-file = open("test_log.txt", "w")
-file.write("entry one\n")
-file.close()
-file = open("test_log.txt", "w")
-file.write("entry two\n")
-file.close()
-print("Log test completed!")
+if (input("Wanna start the log test? y/n")) == "y":
+	print("Beginning log test...")
+	file = open("test_log.txt", "w")
+	file.write("%s\n" %(test_start()))
+		# omg this actually kinda worked. But it also makes you go through the test_start() prompts again, which are not recorded the second time. TODO: fix this
+	file.close()
+	print("Log test completed!")
+else:
+	print ("ok that's cool too, see ya later!")
 
 # -------- LOG CODE: --------------------------------
 
-# create initial, empty log: list or something else mutable.
-# I'll create a new file for it, if there isn't already a file
-	# description of syntax here: http://www.pythonforbeginners.com/files/reading-and-writing-files-in-python
+# description of syntax, for using files: http://www.pythonforbeginners.com/files/reading-and-writing-files-in-python
 
 '''
 def init_log():
 	# create the file for the log if it does not exist yet; otherwise, open the file
 	if test_log.txt doesn't exist:
-		file = open("test_log.txt","w")
-		file.write("Hello World")
-		file.close()
-		# note: I tested this and it seems to work, but it looks like it's overwriting previous contents every time.
+		# below: the f is an arbitrarily named variable; the "a" indicates that the text will be appended (no overwriting)
+		f = open("test_log.txt", "a")
 	else:
-		# below: the f is an arbitrarily named variable; the "w" indicates write access
-		f = open("test_log.txt", "w")
+		file = open("test_log.txt","w")
+		file.write(new_entry)
+		# idk if I really have to write anything here, maybe something simple like "Log - Procrastinating Fiesta" 
+		file.close()
+		# note: using "w" means contents would be overwritten
 
 def add_entry():
 	# function to add an entry to the log
@@ -96,8 +96,8 @@ elif (x == pressed):
 # figure out how to version this (looks like there are multiple ways to do this... ugh)
 # allow inputs to be case-insensitive - pretty sure you can import something for this, or use a built-in function
 # add a function to allow the user to read their log within the program. Or print instructions on how to do this
+# fix the log bug
 
-# it would be cool if there was a log of some sort, of how often you were/weren't procrastinating.
 # maybe have an array to keep track of dates as well? (the day and a list of that day's results?) idk really
 	# ok so having days sounds hard and I'm going to focus on a list of results for now (as of 5/9/18)
 # this will be far in the future but what about a GUI? A command-line thing is very meh in terms of aesthetics
