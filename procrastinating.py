@@ -69,6 +69,8 @@ def init_log():
 		file.close()
 		# note: using "w" means contents would be overwritten
 
+# is is possible to merge init_log() and add_entry() into one function? If I can use "a" for a new file, maybe?
+
 def add_entry():
 	# function to add an entry to the log
 	wannalog = input("Do you want to log your answer for the future? (y/n)")
