@@ -22,7 +22,7 @@ def notworking():
 		# notworking_var is used as a variable to store the answer in, and then you can maybe put it in the log later
 
 def test_start():
-	'''This is used to take *any* input from the user and return the correct thing.'''
+	'''This is used to take *any* input from the user and return the correct thing. I might rename it someday but am afraid of breaking something'''
 	user_intent = input("\nWelcome to Procrastinating Fiesta! Currently running v 0.1.1\nType info for more info, license to see the license, or exit to quit.\nTo start, hit <enter>.")
 	if (user_intent == "info"):
 		return "hello! here's a placeholder for info"
@@ -38,15 +38,15 @@ def test_start():
 
 # -------- THINGS HAPPEN --------------------------------
 
-print(test_start())
+result = test_start()
+print(result)
 # log things
 
 # log test:
 if (input("Wanna start the log test? y/n")) == "y":
 	print("Beginning log test...")
-	file = open("test_log.txt", "w")
-	file.write("%s\n" %(test_start()))
-		# omg this actually kinda worked. But it also makes you go through the test_start() prompts again, which are not recorded the second time. TODO: fix this
+	file = open("test_log.txt", "a")
+	file.write("%s\n" %(result))
 	file.close()
 	print("Log test completed!")
 else:
