@@ -43,14 +43,32 @@ print(result)
 # log things
 
 # log test:
-if (input("Wanna start the log test? y/n")) == "y":
-	print("Beginning log test...")
+if (input("Wanna log this? y/n")) == "y":
+	print("Logging...")
+	date = input("Hold up! What's the date? (Recommended format: MM/DD/YYYY)")
+		# to do: figure out how to get the date and time w/out asking
 	file = open("test_log.txt", "a")
+	file.write("%s\n" %(date))
 	file.write("%s\n" %(result))
 	file.close()
 	print("Log test completed!")
 else:
 	print ("ok that's cool too, see ya later!")
+
+# end processes:
+# ending log processes
+print("Anything else you wanna do?")
+last_log_intents = input("Try typing 'clear' to clear the whole log, or read all your entries with 'read'.")
+if (last_log_intents == "clear"):
+	file = open("test_log.txt", "a")
+	file.write("")
+	file.close()
+elif (last_log_intents == "read"):
+	file = open("test_log.txt", "r")
+	print(file.read())
+	file.close()
+	# todo: in the future, you can use readline() to read line by line, which may be convenient when the log gets long
+# todo: use "with" instead of what is already here; is good practice b/c it automatically closes file when done
 
 # -------- LOG CODE: --------------------------------
 
@@ -98,19 +116,21 @@ elif (x == pressed):
 # figure out how to version this (looks like there are multiple ways to do this... ugh)
 # allow inputs to be case-insensitive - pretty sure you can import something for this, or use a built-in function
 # add a function to allow the user to read their log within the program. Or print instructions on how to do this
-# fix the log bug
+# disallow logging info, license, exit strings
+# write last_log_intents stuff to allow user to do it multiple times
+	# make clearing log work
+	# use readline() and with to improve code
+# write info, get license and insert boilerplate, and make exit() work
 
-# maybe have an array to keep track of dates as well? (the day and a list of that day's results?) idk really
-	# ok so having days sounds hard and I'm going to focus on a list of results for now (as of 5/9/18)
 # this will be far in the future but what about a GUI? A command-line thing is very meh in terms of aesthetics
 
 # -------- MASTER LIST OF ALL FUNCTIONS because I can't keep track of them and what they do: --------------------------------
 '''
 - notworking() is used to take the user's initial input of whether they are procrastinating at the moment.
-- init_log() checks if the log file exists. If it doesn't, it is created; else, it is opened.
-- add_entry() will be used to put the user's entry into the log if they opt to do so.
+- possibly superfluous logging functions
+	- init_log() checks if the log file exists. If it doesn't, it is created; else, it is opened.
+	- add_entry() will be used to put the user's entry into the log if they opt to do so.
 - clear_log() will be used to delete all entries from the log and allow the user to put their new input into a newly blank log.
-	- should it be clearlog and add entry, or just clear log without adding an entry? Maybe I can put an option here.
 - info() is used to display more info about the project: the author, last update (May 2018), etc.
 - license() displays the license
 - exit() is used to quit and close the program. (look to see if there's a built-in Python function for this)
