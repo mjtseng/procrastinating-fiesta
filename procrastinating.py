@@ -58,7 +58,7 @@ else:
 # end processes:
 # ending log processes
 print("Anything else you wanna do?")
-last_log_intents = input("Try typing 'clear' to clear the whole log, or read all your entries with 'read'.")
+last_log_intents = input("Try typing 'clear' to clear the whole log, read all your entries with 'read', or just exit with <enter>.")
 if (last_log_intents == "clear"):
 	file = open("test_log.txt", "w")
 	file.write("")
