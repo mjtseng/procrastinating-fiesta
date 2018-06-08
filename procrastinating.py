@@ -38,6 +38,9 @@ def test_start():
 
 # -------- THINGS HAPPEN --------------------------------
 
+note = "Hey everyone, just a note: this is a work in progress, done by someone who procrastinates a lot herself, so sorry I'm not doing a ton of work on this (also it is exam season my dudes)"
+
+print(note)
 result = test_start()
 print(result)
 # log things
@@ -49,11 +52,11 @@ if (input("Wanna log this? y/n")) == "y":
 		# to do: figure out how to get the date and time w/out asking
 	file = open("test_log.txt", "a")
 	file.write("%s\n" %(date))
-	file.write("%s\n" %(result))
+	file.write("%s\n\n" %(result))
 	file.close()
-	print("Log test completed!")
+	print("Successfully logged!")
 else:
-	print ("ok that's cool too, see ya later!")
+	print ("ok that's cool too, see ya later! :)")
 
 # end processes:
 # ending log processes
@@ -65,6 +68,7 @@ if (last_log_intents == "clear"):
 	file.close()
 elif (last_log_intents == "read"):
 	file = open("test_log.txt", "r")
+	print("\n")
 	print(file.read())
 	file.close()
 	# todo: in the future, you can use readline() to read line by line, which may be convenient when the log gets long
